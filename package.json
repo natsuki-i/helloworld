@@ -8,5 +8,8 @@
     "awesome-typescript-loader": "^3.1.2",
     "typescript": "^2.2.2",
     "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "core-js": "^2.4.1"
   }
 }
