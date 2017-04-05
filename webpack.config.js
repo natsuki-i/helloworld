@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    app: './src/App.ts',
+    app: './src/App.tsx',
   },
   output: {
     path: __dirname + "/dist/",
