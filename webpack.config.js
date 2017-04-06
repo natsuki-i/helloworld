@@ -1,6 +1,7 @@
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
-module.exports = {
+const config = {
   entry: {
     app: './src/App.tsx',
   },
@@ -28,4 +29,11 @@ module.exports = {
       ],
     }),
   ]
+}
+
+module.exports = (env) => {
+  if ("production" === env) {
+    config.plugins.push(new CompressionPlugin())
+  }
+  return config;
 }
