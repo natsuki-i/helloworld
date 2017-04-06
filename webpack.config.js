@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: __dirname + "/dist/",
     filename: "[name].[hash].js",
-    libraryTarget: "commonjs-module",
+    libraryTarget: "umd",
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -23,6 +23,9 @@ module.exports = {
   plugins: [
     new StaticSiteGeneratorPlugin({
       crawl: true,
+      paths: [
+        "/404.html"
+      ],
     }),
   ]
 }
